@@ -6,6 +6,7 @@ import { player } from "./components/Player";
 import { map, initializeMap } from "./components/Map";
 import { animateVehicles } from "./animateVehicles";
 import { animatePlayer } from "./animatePlayer";
+import { hitTest } from "./hitTest";
 import "./style.css";
 import "./collectUserInput";
 
@@ -35,6 +36,7 @@ renderer.setAnimationLoop(animate);
 function animate() {
   animateVehicles();
   animatePlayer();
+  hitTest();
 
   renderer.render(scene, camera);
 }
