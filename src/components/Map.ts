@@ -22,10 +22,11 @@ export function initializeMap() {
 export function addRows() {
   const newMetadata = generateRows(20);
 
+  const startIndex = metadata.length;
   metadata.push(...newMetadata);
 
-  metadata.forEach((rowData, index) => {
-    const rowIndex = index + 1;
+  newMetadata.forEach((rowData, index) => {
+    const rowIndex = startIndex + index + 1;
 
     if (rowData.type === "forest") {
       const row = Grass(rowIndex);
