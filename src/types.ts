@@ -1,7 +1,6 @@
 import * as THREE from "three";
 
 export type RowType = "forest" | "car" | "truck";
-
 export type Row =
   | {
       type: "forest";
@@ -14,7 +13,6 @@ export type Row =
       vehicles: {
         initialTileIndex: number;
         color: THREE.ColorRepresentation;
-        ref?: THREE.Object3D;
       }[];
     }
   | {
@@ -24,6 +22,7 @@ export type Row =
       vehicles: {
         initialTileIndex: number;
         color: THREE.ColorRepresentation;
-        ref?: THREE.Object3D;
       }[];
     };
+
+export type MoveDirection = "forward" | "backward" | "left" | "right";
