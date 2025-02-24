@@ -12,6 +12,11 @@ export const metadata: Row[] = [];
 export const map = new THREE.Group();
 
 export function initializeMap() {
+  // Remove all rows
+  metadata.length = 0;
+  map.remove(...map.children);
+
+  // Add new rows
   for (let rowIndex = 0; rowIndex > -5; rowIndex--) {
     const grass = Grass(rowIndex);
     map.add(grass);
