@@ -4,6 +4,7 @@ import { Camera } from "./components/Camera";
 import { DirectionalLight } from "./components/DirectionalLight";
 import { player } from "./components/Player";
 import { map, initializeMap } from "./components/Map";
+import { animateVehicles } from "./animateVehicles";
 import "./style.css";
 
 const scene = new THREE.Scene();
@@ -27,3 +28,10 @@ function initializeGame() {
 
 const renderer = Renderer();
 renderer.render(scene, camera);
+renderer.setAnimationLoop(animate);
+
+function animate() {
+  animateVehicles();
+
+  renderer.render(scene, camera);
+}
