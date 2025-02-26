@@ -1,11 +1,20 @@
+/*
+  Imports the 'Press Start 2P' font from Google Fonts.
+*/
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 
+/*
+  Styles the body element. Sets margin to 0, uses flexbox for layout, and sets the font family to 'Press Start 2P'.
+*/
 body {
   margin: 0;
   display: flex;
   font-family: "Press Start 2P", cursive;
 }
 
+/*
+  Styles the controls container. Positions it at the bottom, sets minimum width to 100%, uses flexbox for alignment.
+*/
 #controls {
   position: absolute;
   bottom: 0;
@@ -15,25 +24,37 @@ body {
   justify-content: center;
 }
 
+/*
+  Styles the inner div within the controls container. Uses grid layout for button arrangement.
+*/
 #controls div {
   display: grid;
-  grid-template-columns: 50px 50px 50px;
-  grid-template-rows: auto auto;
+  grid-template-columns: 50px 50px 50px; /* Adjust as needed for button count */
+  grid-template-rows: auto auto; /* Adjust as needed for button count */
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   margin-bottom: 20px;
 }
 
+/*
+  Styles the buttons within the controls. Sets width, background color, and border.
+*/
 #controls button {
   width: 100%;
   background-color: white;
   border: 1px solid lightgray;
 }
 
+/*
+  Styles the first button in the controls, making it span the full width.
+*/
 #controls button:first-of-type {
   grid-column: 1/-1;
 }
 
+/*
+  Styles the score display. Positions it at the top left corner and sets font size and color.
+*/
 #score {
   position: absolute;
   top: 20px;
@@ -43,6 +64,9 @@ body {
   color: white;
 }
 
+/*
+  Styles the result container.  This container is hidden until a collision occurs.
+*/
 #result-container {
   position: absolute;
   min-width: 100%;
@@ -51,8 +75,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  visibility: hidden;
+  visibility: hidden; /* Initially hidden */
 
+  /* Styles the result message within the result container. */
   #result {
     display: flex;
     flex-direction: column;
@@ -61,6 +86,7 @@ body {
     padding: 20px;
   }
 
+  /* Styles the retry button within the result container. */
   button {
     background-color: red;
     padding: 20px 50px 20px 50px;
