@@ -31,4 +31,4 @@ I'm still learning, so any feedback or suggestions are greatly appreciated! Let 
 
 ## Live Preview
 
-Play the game here: [gurkanozil.github.io/crossy-road-game](https://gurkanozil.github.io/crossy-road-game)
+Currently deployed here, however game doesn't seem so function without local environment [gurkanozil.github.io/crossy-road-game](https://gurkanozil.github.io/crossy-road-game)
